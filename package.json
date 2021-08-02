@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.7",
+    "@wasmer/wasmfs": "^0.12.0",
+    "as-console": "^6.0.1",
+    "as-udp": "^1.0.5",
+    "as-wasi": "^0.4.6",
+    "assemblyscript": "^0.19.7",
+    "express": "^4.17.1",
+    "fastify": "^3.19.2",
+    "json-as": "^0.1.3",
+    "node-static": "^0.7.11"
+  },
+  "scripts": {
+    "asbuild:untouched": "asc assembly/test.ts --target debug --explicitStart",
+    "asbuild:optimized": "asc assembly/test.ts --target release --explicitStart",
+    "asbuild": "yarn asbuild:untouched && yarn asbuild:optimized",
+    "test": "node tests"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.7"
+  }
+}
